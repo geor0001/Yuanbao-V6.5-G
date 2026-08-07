@@ -1,4 +1,27 @@
 # 元宝 Bot Web 控制台 6.0Pro Max · 专业增强版（全功能）
+使用说明
+安装 Termux 终端模拟器软件（推荐从官方源下载）：
+
+F-Droid：https://f-droid.org/packages/com.termux/
+GitHub Releases：https://github.com/termux/termux-app/releases
+安装依赖（打开软件后依次输入后回车）：
+
+pkg install python-pip
+pip install -r requirements.txt
+下载项目压缩包文件至存储目录。
+
+修改龙虾秘钥：建议下载 MT 管理器（https://mt2.cn/），用软件打开文件夹下 config.json 文件，修改：
+
+APP_KEY、APP_SECRET（如果没有的话可以点关联界面，然后把那两个 app 开头的复制到配置文件里对应的位置，然后直接运行文件，再点击“我已操作”就行了）
+DEFAULT_GROUP_CODE（默认派派号）
+IMAGE_GROUP_CODE（中转派派号）
+修改完成后点击保存。
+
+打开 Termux 软件，cd 到你的项目文件夹（例如：cd ~/storage/shared/XXX）。
+
+输入 python app.py，回车，即可运行程序。
+
+浏览器输入 http://127.0.0.1:5000 。
 
 > 🔷 **专业增强版（完整功能）**：本版本保留 V4.5 的**全部能力**——全场景液态玻璃（Liquid Glass）、各厂商主题（11 套手机厂商 UI 效果 / `PHONE_EFFECTS`）、动态背景（视频背景 + 自定义图片）、🌌 鸿蒙空间光感（HarmonyOS 6 沉浸光效）、🖼️ 在线图片编辑器（ImgEditor），以及毛玻璃开关、16 套 QQ 主题、可视化音乐播放器、AI 聊天、@ 群成员、个性化后端化与 config.json 可视化编辑器。
 > 与个人用户免费版的区别：免费版移除了上述 5 项能力；本增强版为全功能版。
