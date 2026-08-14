@@ -95,8 +95,21 @@ check() {
 check
 
 echo 准备克隆待选择的所有项目
-git clone https://github.com/geor0001/Yuanbao-V6.5-G.git
+git clone https://github.com/geor0001/Yuanbao-V6.5-G.git temp-a
 echo 完成1/2
-git clone github.com/anxi78/yuanbao_bot_client
+git clone github.com/anxi78/yuanbao_bot_client temp-b
 echo 完成2/2
 echo 进行下一步
+while true; do
+    echo anxi版本:1
+    echo web版本:2
+    read -r -p "请输入 1/2: " choice
+    case "$choice" in
+        1|2)
+            break
+            ;;
+        *)
+            echo "输入无效，请重新输入"
+            ;;
+    esac
+done
