@@ -1,3 +1,3 @@
 echo yuanbao_quickinstaller(git)v1.5
 echo by geor
-echo 正在开发中
+echo 准备克隆待选择的所有项目
