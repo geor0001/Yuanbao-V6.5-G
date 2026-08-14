@@ -1,5 +1,5 @@
-echo yuanbao_quickinstaller(git)v1.5
-echo by geor
+echo "yuanbao_quickinstaller(git)v1.5"
+echo "by geor"
 echo 正在检测和安装必要工具
 info() { echo -e "\033[1;32m[INFO]\033[0m $1"; }
 warn() { echo -e "\033[1;33m[WARN]\033[0m $1"; }
@@ -94,12 +94,12 @@ check() {
 
 check
 
-echo 准备克隆待选择的所有项目
+echo "准备克隆待选择的所有项目"
 git clone https://github.com/geor0001/Yuanbao-V6.5-G.git temp-a
 echo 完成1/2
 git clone github.com/anxi78/yuanbao_bot_client temp-b
-echo 完成2/2
-echo 进行下一步
+echo "完成2/2"
+echo "进行下一步"
 while true; do
     echo anxi版本:1
     echo web版本:2
@@ -113,3 +113,13 @@ while true; do
             ;;
     esac
 done
+if [ "$choice" -eq 1 ]; then
+    echo "正在安装anxi版本"
+    sudo rm -rf temp-b
+elif [ "$choice" -eq 2 ]; then
+    echo "正在安装web版本"
+    sudo rm -rf temp-a
+else
+    echo "代码运行可能出错了，请重试"
+    exit 1
+fi
